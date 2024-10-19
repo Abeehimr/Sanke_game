@@ -166,12 +166,17 @@ bool mov(int&tail,int& head,bool& cherry,int& length,int& face,int filled[][C], 
 
 int change_face(int face,int ch){
     if (ch == 97 || ch == 65){
-        return (face +3)%4;
+        return 2;
     }
     else if (ch == 100 || ch == 68){
-        return (face+1)%4;
+        return 0;
     }
-
+    else if (ch == 119 || ch == 87){
+        return 3;
+    }
+    else if (ch == 115 || ch == 83){
+        return 1;
+    }
     return face;
 }
 
