@@ -146,11 +146,10 @@ bool mov(int&tail,int& head,bool& cherry,int& length,int& face,int filled[][C], 
     // change filled
     mark_fill(snake[head],1,filled);
     mark_fill(next,2,filled);
-    mark_fill(snake[tail],0,filled);
-
 
     // change snake
     if (!ate){
+        mark_fill(snake[tail],0,filled);
         snake[tail] = -1;
         tail = (tail + 1)%(R*C+1);
     }
